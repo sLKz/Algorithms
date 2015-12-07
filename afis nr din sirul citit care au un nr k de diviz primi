@@ -1,0 +1,49 @@
+  //-o fct proc pt citirea datelor
+	//-o fct proc pt afis elem
+	//-o fct care verifica peoprietatea
+
+
+
+#include <iostream>
+using namespace std;
+void citestev(int v[],int&n)    
+{int i;                             
+cout<<"n= ";                    
+cin>>n;                          
+for(i=0;i<n;i++)                  
+{cout<<"v["<<i+1<<"]= ";                  
+cin>>v[i];}}                    
+    
+void afisarev(int v[],int n)     
+{int i;                         
+for(i=0;i<n;i++)                   
+cout<<v[i]<<" ";                
+cout<<endl;}               
+
+int diviz(int x)
+{int nr=0, f=3;
+if(x%2==0)
+{nr++;
+while(x%2==0)
+x=x/2;}
+while(x!=1)
+{if(x%f==0)
+{nr++;
+while(x%f==0)
+x=x/f;}
+f+=2;}
+return nr;}
+
+int main ()
+
+{int n,v[50],i,ok=0;
+citestev(v,n);
+afisarev(v,n);
+cout<<"val care au "<<ok<<" diviz primi sunt: ";
+for(i=0;i<n;i++)
+if(diviz(v[i])==ok)
+{ok=1;
+cout<<v[i]<<" ";}
+if(ok==0)
+cout<<"nu exista";
+return 0;}
