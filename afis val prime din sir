@@ -1,0 +1,44 @@
+//  -o fct procedurala pt citirea datelor
+//	-o fct proc pt afis elem vect
+//	-o fct care testeaza proprietarea de nr prime
+
+
+
+#include <iostream>
+#include <cmath>
+using namespace std; 
+
+void citestev(int v[],int&n)         
+{int i;                                   
+cout<<"n= ";                         
+cin>>n;                                  
+for(i=0;i<n;i++)                          
+{cout<<"v["<<i+1<<"]= ";                           
+cin>>v[i];}}                 
+
+void afisarev(int v[],int n)
+{int i;                        
+for(i=0;i<n;i++)                  
+cout<<v[i]<<" ";              
+cout<<endl;}                        
+
+
+int prim (int x)
+{int i;
+for(i=2;i<=sqrt(x);i++)
+if(x%i==0)
+return 0;
+return 1; }
+int main()
+{int n,v[50],i,ok=0;
+citestev(v,n);
+afisarev(v,n);
+cout<<"val prime sunt: ";
+for(i=0;i<n;i++)
+if(prim(v[i])==1)
+{cout<<v[i]<<" ";
+ok=1;}
+if(ok==0)
+cout<<"nu exista: ";
+return 0;
+}
