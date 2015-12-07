@@ -1,0 +1,36 @@
+//  -o fct proc pt citirea vect
+//	-o fct proc pt afis vect
+//	-o fct care rezolva
+
+
+
+#include <iostream>
+using namespace std;
+void citestev(int v[],int&n)    
+{int i;                             
+cout<<"n= ";                    
+cin>>n;                          
+for(i=0;i<n;i++)                  
+{cout<<"v["<<i+1<<"]= ";                  
+cin>>v[i];}}                    
+    
+void afisarev(int v[],int n)     
+{int i;                         
+for(i=0;i<n;i++)                   
+cout<<v[i]<<" ";                
+cout<<endl;} 
+
+int nr_cifre (int x)
+{int nrc=0;
+while(x!=0)
+{nrc++;
+x=x/10;}
+return nrc;}
+int main()
+{int n,v[50],i,ok=0;
+citestev(v,n);
+afisarev(v,n);
+cout<<"nr de cifre din care este format fiecare val este: ";
+for(i=0;i<n;i++)
+cout<<nr_cifre(v[i])<<" ";
+return 0;}
