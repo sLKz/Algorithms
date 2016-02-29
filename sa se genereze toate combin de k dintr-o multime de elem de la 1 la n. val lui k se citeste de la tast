@@ -1,0 +1,34 @@
+#
+using
+
+int st[25],n,k;
+void init()
+{do
+{cout<<"n=";cin>>n;
+cout<<"k=";cin>>k;}
+while(n<k)}
+int valid (int p)
+{if (p>1 && st[p]<=st[p-1]
+return 0;
+else
+return 1;}
+
+void tipar (int p)
+{int i;
+for(i=1;i<=p;i++)
+cout<<st[i]<<" ";
+cout<<endl;}
+void bktr (int p)
+{int pval;
+for(pval=1;pval<=n;pval++)
+{st[p]=pval;
+if(valid(p)==1)
+if(p==k)
+tipar(p)
+else
+bktr(p++);}}
+
+int main()
+{init ();
+bktr(1);
+return 0;}
