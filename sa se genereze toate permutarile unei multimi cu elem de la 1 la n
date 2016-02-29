@@ -1,0 +1,42 @@
+
+
+#include
+using namespace std;
+
+int st[25],n;
+void init()
+{cout<<"n=";cin>>n;}
+int valid(int p)
+{int i;
+for(i=1;i<p;i++)
+if(st[p]==st[i])
+return 0;
+return 1;}
+
+void tipar(int p)
+{int i;
+for(i=1;i<=p;i++)
+cout<<st[i]<<" ";
+cout<<endl;}
+
+{int pval;
+for(pval=1;pval<=n;pval++)
+{st[p]=pval
+if(valid(p)==1)
+if(p==n)
+tipar(p)
+else
+bktr(p++);}}
+
+int main()
+{init ();
+bktr(1);
+return 0;}
+
+
+
+
+
+
+
+
