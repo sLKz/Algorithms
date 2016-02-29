@@ -14,10 +14,12 @@ int valid(int p)
 return 0;
 else return 1;}
 void tipar(int p)
+
 {int i;
 for(i=1;i<=p;i++)
 cout<<st[i]<<" ";
 cout<<endl;}
+
 void bktr(int p)
 {int pval;
 for(pval=1;pval<=n;pval++)
