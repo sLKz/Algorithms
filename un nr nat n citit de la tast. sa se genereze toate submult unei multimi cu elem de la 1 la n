@@ -1,0 +1,24 @@
+#include <iostream>
+using
+int st[25],n;
+void init()
+
+{cout<<"n=";cin>>n;}
+int valid(int p)
+{return 1;}
+void tipar (int p)
+{int i;
+for(i=1;i<=p;i++)
+cout<<st[i]<<" ";
+cout<<endl;
+void bktr(int n)
+{int pval;
+for(pval=st[p-1]+1;pval<n;pval++)
+{st[p]=pval;
+if(valid(p))
+{tipar(p);
+bktr(p+1)}}}
+int main()
+{int();
+bktr(1);
+return 0;}
